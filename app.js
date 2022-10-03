@@ -351,12 +351,425 @@ comments
 
 // ARRAYS AND ARRAY METHODS
 // Create some arrays
-const numbers = [43, 56, 33, 23, 44, 36, 5];
-const numbers2 = new Array(22,45,33,76,54);
-const fruit = ['Apple','Banana','Orange','Pear'];
-const mixed = [22,'Hello',true,undefined,null, {a:1, b:2}, new Date()];
+// const numbers = [43, 56, 33, 23, 44, 36, 5];
+// const numbers2 = new Array(22,45,33,76,54);
+// const fruit = ['Apple','Banana','Orange','Pear'];
+// const mixed = [22,'Hello',true,undefined,null, {a:1, b:2}, new Date()];
 
-let val; 
+// let val;
+
+// // Get array length
+// val = numbers.length;
+// // Check if is array
+// val = Array.isArray(numbers);
+// // Get single value
+// val = numbers[3];
+// val = numbers[0];
+// // Insert into array
+// numbers[2] = 100;
+// // Find index of value
+// val = numbers.indexOf(36);
+// val = numbers.indexOf(1);
+
+// // MUTATING ARRAYS
+// // Add on to end
+// numbers.push(250);
+// // Add on to front
+// numbers.unshift(120);
+// // Take off from end
+// numbers.pop();
+// // Take off from front
+// numbers.shift();
+// // Splice values
+// numbers.splice(1,1);
+// numbers.splice(1,3);
+// // Reverse
+// numbers.reverse();
+// // Concatenate array
+// val = numbers.concat(numbers2);
+// // Sorting
+// val = fruit.sort();
+// val = numbers.sort();
+
+// // Use the compare function
+// val = numbers.sort(function(x,y){
+//     return x - y;
+// });
+
+// // Reverse sort
+// val = numbers.sort(function(x,y){
+//     return y - x;
+// });
+
+// // Find
+// function under50(num){
+//     return num < 50;
+// }
+
+// val = numbers.find(under50);
+
+// console.log(numbers);
+// console.log(val);
+
+// OBJECT LITERALS
+// const person = {
+//     firstName: 'Steve',
+//     lastName: 'Smith',
+//     age: 30,
+//     email: 'steve@aol.com',
+//     hobbies: ['music', 'sports'],
+//     address: {
+//         city: 'Miami',
+//         state: 'Florida'
+//     },
+//     getBirthYear: function(){
+//         return 2017 - this.age;
+//     }
+// }
+
+// let val;
+
+// val = person;
+// // Get specific value
+// val = person.firstName;
+// val = person['firstName'];
+// val = person.age;
+// val = person.hobbies;
+// val = person.hobbies[1];
+// val = person.address.state;
+// val = person.getBirthYear();
+
+// console.log(val);
+
+// const people = [
+//     {name: 'John', age: 30},
+//     {name: 'Mike', age: 23},
+//     {name: 'Nancy', age: 40}
+// ]
+
+// for(let i = 0; i < people.length; i++){
+//     console.log(people[i].name);
+// }
+
+// DATES AND TIMES
+// let val;
+
+// const today = new Date(); // Date object
+// let birthday = new Date('9-10-1981 11:25:00');
+// birthday = new Date('September 10 1981');
+// birthday = new Date('9/10/1981');
+
+// val = today.getMonth(); // zero based!
+// val = today.getDate();
+// val = today.getDay(); // zero based, gives day of week starting with Sunday
+// val = today.getFullYear();
+// val = today.getHours();
+// val = today.getMinutes();
+// val = today.getSeconds();
+// val = today.getMilliseconds();
+// val = today.getTime(); // Amount of time that has passed since January 1, 1970
+
+// birthday.setMonth(2);
+// birthday.setDate(12);
+// birthday.setFullYear(1985);
+// birthday.setHours(3);
+// birthday.setMinutes(30);
+// birthday.setSeconds(25);
+
+// console.log(val);
+// console.log(birthday);
+
+// IF STATEMENTS AND COMPARISON OPERATORS
+// const id = 100;
+
+// EQUAL TO
+// if(id == 101){
+//     console.log('CORRECT');
+// }else{
+//     console.log('INCORRECT');
+// }
+
+// // NOT EQUAL TO
+// if(id != 101){
+//     console.log('CORRECT');
+// }else{
+//     console.log('INCORRECT');
+// }
+
+// // EQUAL TO VALUE AND TYPE
+// if(id === 100){
+//     console.log('CORRECT');
+// }else{
+//     console.log('INCORRECT');
+// }
+
+// // NOT EQUAL TO VALUE AND TYPE
+// if(id !== 100){
+//     console.log('CORRECT');
+// }else{
+//     console.log('INCORRECT');
+// }
+
+// Test if undefined
+// if(typeof id !== 'undefined'){
+//     console.log(`The ID is ${id}`);
+// } else {
+//     console.log('NO ID');
+// }
+
+// GREATER OR LESS THAN (>, <, <=, >=)
+// if(id > 200) {
+//     console.log('CORRECT');
+// }else {
+//     console.log('INCORRECT');
+// }
+
+// IF ELSE
+
+//const color = 'yellow';
+
+// if(color === 'red') {
+//     console.log('Color is red');
+// }else if(color === 'blue') {
+//     console.log('Color is blue');
+// } else {
+//     console.log('Color is not red or blue');
+// }
+
+// LOGICAL OPERATORS
+// const name = 'Steve';
+// const age = 25;
+
+// // AND &&
+// if(age > 0 && age < 12){
+//     console.log(`${name} is a child`);
+// } else if(age >= 13 && age <= 19){
+//     console.log(`${name} is a teenager`);
+// } else{
+//     console.log(`${name} is an adult`);
+// }
+
+// // OR ||
+// if(age < 16 || age > 65){
+//     console.log(`${name} can not run in race`);
+// } else{
+//     console.log(`${name} is registered for the race`);
+// }
+
+// // TERNARY OPERATOR
+// console.log(id === 100 ? 'CORRECT' : 'INCORRECT');
+
+// // WITHOUT BRACES
+// if(id === 100)
+//     console.log('CORRECT');
+// else
+//     console.log('INCORRECT');
+
+// SWITCHES
+
+// const color = 'red';
+
+// switch(color){
+//     case 'red':
+//         console.log('Color is red');
+//         break;
+//     case 'blue':
+//         console.log('Color is blue');
+//         break;
+//     default:
+//         console.log('Color is not red or blue');
+//         break;
+// }
+
+// switch(new Date().getDay()){
+//     case 0:
+//         day = 'Sunday';
+//         break;
+//     case 1:
+//         day = 'Monday';
+//         break;
+//     case 2:
+//         day = 'Tuesday';
+//         break;
+//     case 3:
+//         day = 'Wednesday';
+//         break;
+//     case 4:
+//         day = 'Thursday';
+//         break;
+//     case 5:
+//         day = 'Friday';
+//         break;
+//     case 6:
+//         day = 'Saturday';
+//         break;
+// }
+
+// console.log(`Today is ${day}`);
+
+// FUNCTION DECLARATIONS AND EXPRESSIONS
+
+// FUNCTION DECLARATIONS
+
+// function greet(firstName = 'John', lastName = 'Doe'){
+//     //console.log('Hello');
+//     // if(typeof firstName === 'undefined'){firstName = 'John'}
+//     // if(typeof lastName === 'undefined'){lastName = 'Doe'}
+//     return 'Hello ' + firstName + ' ' + lastName;
+// }
+
+//console.log(greet());
+
+// FUNCTION EXPRESSIONS - putting a function as a variable assignment
+
+// const square = function(x = 3){
+//     return x*x;
+// };
+
+//console.log(square());
+
+// IMMEDIATELY INVOKABLE FUNCTION EXPRESSIONS - IIFEs
+
+// (function(){
+//     console.log('IIFE Ran...');
+// })();
+
+// (function(name){
+//     console.log(`Hello ${name}`);
+// })('Brad');
+
+// PROPERTY METHODS - when functions are put inside objects
+
+// const todo = {
+//     add: function(){
+//         console.log('Add todo...');
+//     },
+
+//     edit: function(id){
+//         console.log(`Edit todo ${id}`)
+//     }
+// }
+
+// todo.delete = function(){
+//     console.log('Delete todo...');
+// }
+
+// todo.add();
+// todo.edit(22);
+// todo.delete();
+
+// GENERAL LOOPS
+
+// FOR LOOP
+
+// for(let i = 0; i < 10; i++){
+//     if(i === 2){
+//         console.log('2 is my favorite number');
+//         continue; // stops loop here and goes on to next iteration
+//     }
+
+//     if(i === 5){
+//         console.log('Stop the loop');
+//         break; // breaks out of the loop completely
+//     }
+
+//     console.log('Number ' + i);
+// }
+
+// WHILE LOOP
+
+// let i = 0;
+
+// while(i < 10){
+//     console.log('Number ' + i);
+//     i ++;
+// }
+
+// DO WHILE
+
+// let i = 0;
+
+// do {
+//     console.log('Number ' + i);
+//     i ++
+// }
+
+// while(i < 10);
+
+// LOOP THROUGH ARRAY
+// const cars = ['Ford', 'Chevy', 'Honda', 'Toyota'];
+
+// for(let i= 0; i < cars.length; i++) {
+//     console.log(cars[i]);
+// }
+
+// FOREACH
+// cars.forEach(function(car, index, array){ // can take in index, iterator, and array
+//     console.log(`${index}: ${car}`);
+//     console.log(array);
+// });
+
+// MAP
+// const users = [
+//     {
+//         id: 1,
+//         name: 'John',
+//     },
+//     {
+//         id: 2,
+//         name: 'Sara',
+//     },
+//     {
+//         id: 3,
+//         name: 'Karen'
+//     }
+// ];
+
+// const ids = users.map(function(user){
+//     return user.id;
+// })
+
+// console.log(ids);
+
+// FOR IN LOOP
+// const user = {
+//     firstName: 'John',
+//     lastName: 'Doe',
+//     age: 40
+// }
+
+// for(let x in user){
+//     console.log(`${x} : ${user[x]}`);
+// }
+
+// WINDOW METHODS / OBJECTS / PROPERTIES
+
+// ALERT
+//window.alert('Hello World'); the window part isn't needed
+
+// PROMPT
+// const input = prompt();
+// alert(input);
+
+// CONFIRM
+// if(confirm('Are you sure?')){
+//     console.log('YES');
+// } else {
+//     console.log('NO');
+// }
+
+let val;
+
+// Outer height and width
+val = window.outerHeight;
+val = window.outerWidth;
+
+// Inner height and width - inside the scrollbars
+val = window.innerHeight;
+val = window.innerWidth;
+
+// Scroll Points
+
 
 console.log(val);
 
