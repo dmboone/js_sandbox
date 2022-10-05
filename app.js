@@ -1184,12 +1184,136 @@ comments
 // }
 
 // KEYBOARD AND INPUT EVENTS
-const form = document.querySelector('form');
-const taskInput = document.getElementById('task');
+// const form = document.querySelector('form');
+// const taskInput = document.getElementById('task');
+// const heading = document.querySelector('h5');
+// const select = document.querySelector('select');
 
-form.addEventListener('submit', runEvent);
+// taskInput.value = ''; // run after submitting form to clear it out
 
-function runEvent(e){
-    console.log(`EVENT TYPE: ${e.type}`);
-}
+// form.addEventListener('submit', runEvent);
+
+// Keydown
+// taskInput.addEventListener('keydown', runEvent);
+
+// Keyup
+// taskInput.addEventListener('keyup', runEvent);
+
+// Keypress
+// taskInput.addEventListener('keypress', runEvent);
+
+// Focus - click into an input
+// taskInput.addEventListener('focus', runEvent);
+
+// Blur - click outside of an input
+// taskInput.addEventListener('blur', runEvent);
+
+// Cut
+// taskInput.addEventListener('cut', runEvent);
+
+// Paste
+// taskInput.addEventListener('paste', runEvent);
+
+// Input - fires off on any of the above inputs
+// taskInput.addEventListener('input', runEvent);
+
+// Change - used only on <select> list
+// select.addEventListener('change', runEvent);
+
+// function runEvent(e){
+//     console.log(`EVENT TYPE: ${e.type}`);
+
+//     // console.log(e.target.value); // Log everything that is typed on keydown
+
+//     // heading.innerText = e.target.value;
+
+//     // Get input value
+//     // console.log(taskInput.value);
+
+//     // e.preventDefault(); - if you get error when clicking add ask
+// }
+
+// EVENT BUBBLING AND EVENT DELEGATION
+
+// EVENT BUBBLING - passes the event up to the parents; bubbles up the dom
+// document.querySelector('.card-title').addEventListener('click', function(){
+//     console.log('card title');
+// });
+
+// document.querySelector('.card-content').addEventListener('click', function(){
+//     console.log('card content');
+// });
+
+// document.querySelector('.card').addEventListener('click', function(){
+//     console.log('card');
+// });
+
+// document.querySelector('.col').addEventListener('click', function(){
+//     console.log('col');
+// });
+
+// EVENT DELEGATION - passes the event down to the children; delegates down the dom
+// Used when action only works on first item instead of all that have that same class/etc.
+// Use when you have dynamically added something to the dom through javascript
+// const delItem = document.querySelector('.delete-item');
+
+// delItem.addEventListener('click', deleteItem);
+
+// document.body.addEventListener('click', deleteItem);
+
+// function deleteItem (e) {
+//     // if(e.target.parentElement.className === 'delete-item secondary-content'){
+//     //     console.log('delete item');
+//     // }
+
+//     if(e.target.parentElement.classList.contains('delete-item')){ // best way in this scenario
+//         console.log('delete item');
+//         e.target.parentElement.parentElement.remove();
+//     }
+// }
+
+// LOCAL AND SESSION STORAGE
+
+// Set Local Storage Item - gone once you actively remove it yourself
+// localStorage.setItem('name', 'John');
+// localStorage.setItem('age', '30');
+
+// Remove from Storage
+// localStorage.removeItem('name');
+
+// Get from Storage
+// const name = localStorage.getItem('name');
+// const age = localStorage.getItem('age');
+
+// Clear Local Storage
+// localStorage.clear();
+
+// Set Session Storage Item - gone after you close the browser
+// sessionStorage.setItem('name', 'Beth');
+
+// document.querySelector('form').addEventListener('submit', function(e){
+//     const task = document.getElementById('task').value;
+
+//     let tasks;
+
+//     if(localStorage.getItem('tasks') === null){
+//         tasks = [];
+//     } else {
+//         tasks = JSON.parse(localStorage.getItem('tasks'));
+//     }
+
+//     tasks.push(task);
+
+//     localStorage.setItem('tasks', JSON.stringify(tasks));
+
+//     alert('Task saved');
+
+//     e.preventDefault();
+// });
+
+// const tasks =   JSON.parse(localStorage.getItem('tasks'));
+
+// tasks.forEach(function(task){
+//     console.log(task);
+// });
 
