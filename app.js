@@ -1398,3 +1398,39 @@ comments
 // }
 
 // getUsers().then(users => console.log(users));
+
+// ERROR HANDLING WITH TRY...CATCH
+// const user = {email: 'jdoe@gmail.com'};
+
+// try{
+    // // will produce ReferenceError
+    // myFunction();
+
+    // // will produce TypeError
+    // null.myFunction(); 
+
+    // // SyntaxError
+    // eval('Hello World');
+
+    // //URIError
+    // decodeURIComponent('%');
+
+    // if(!user.name){
+    //     // throw 'User has no name';
+    //     throw new SyntaxError('User has no name')
+    // }
+// }catch(e){ // takes in an error object
+    // console.log(`User Error: ${e.message}`);
+    // console.log(e);
+    // console.log(e.message);
+    // console.log(e.name);
+    // console.log(e instanceof ReferenceError); // test the type of error
+    // console.log(e instanceof TypeError);
+    // program will continue after handling the error!
+// } finally {
+//     console.log('Finally runs regardless of result...')
+// }
+
+// console.log('Program continues...');
+
+// REGULAR EXPRESSIONS
