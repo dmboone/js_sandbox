@@ -1433,4 +1433,107 @@ comments
 
 // console.log('Program continues...');
 
-// REGULAR EXPRESSIONS
+// REGULAR EXPRESSIONS - FUNCTIONS
+// let re;
+// re = /hello/;
+// re = /hello/i; // i = case insensitive
+// re = /hello/g; // Global search
+
+// console.log(re);
+// console.log(re.source);
+
+// exec() - Return result in an array or null
+// const result = re.exec('brad hello world');
+// const result = re.exec('hell world'); // will return null
+// console.log(result);
+// console.log(result[0]);
+// console.log(result.index);
+// console.log(result.input);
+
+// test() - Returns true or false
+// re = /hello/i; // makes case insensitive
+// const result = re.test('Hello'); // test is case sensitive
+// console.log(result);
+
+// match() - Return result array or null
+// const str = 'Hello There';
+// const result = str.match(re);
+// console.log(result);
+
+// search() - Returns index of the first match, if not found returns -1
+// const str = 'Hello There';
+// const result = str.search(re);
+// console.log(result);
+
+// replace() - Return new string with some or all matches of a pattern
+// const str = 'Hello There';
+// const newStr = str.replace(re, 'Hi');
+// console.log(newStr);
+
+// REGULAR EXPRESSIONS - METACHARACTER SYMBOLS
+
+// let re;
+// // Literal Characters
+// re = /hello/;
+// re = /hello/i;
+
+// // Metacharacter Symbols
+// re = /^h/i; // Must start with
+// re = /orld$/i; // must end with
+// re = /^hello$/i; // must begin and end with
+// re = /h.llo/i; // matches any ONE character
+// re = /h*llo/i; // matches any character 0 or more times
+// re = /gre?a?y/i; // optional character
+// re = /gre?a?y\?/i; // escape character
+
+
+// // Brackets [] - Character Sets
+// re = /gr[ae]y/i; // must be an a or e
+// re = /[GF]ray/; // must be an G or F
+// re = /[^GF]ray/; // match anything except a G or F
+// re = /[A-Z]ray/; // match any uppercase letter
+// re = /[a-z]ray/; // match any lowercase letter
+// re = /[A-Za-z]ray/; // match any letter
+// re = /[0-9]ray/; // match any digit
+// re = /[0-9][0-9]ray/; // match any digit
+
+// // Braces {} - Quantifiers
+// re = /Hel{2}o/i; // Must occur exactly {n} amount of times
+// re = /Hel{2,4}o/i; // Must occur exactly {n} amount of times
+// re = /Hel{2,}o/i; // Must occur at least {n} times
+
+// // Parenthesis () - Grouping
+// re = /^([0-9]x){3}$/;
+
+
+// // Shorthand Character Classes
+// re = /\w/; // Word character - alphanumeric or _
+// re = /\w+/; // + is one or more
+// re = /\W/; // Non-Word character
+// re = /\d/; // Match any digit
+// re = /\d+/; // Match any digit 0 or more times
+// re = /\D/; // Match any Non-digit
+// re = /\s/; // Match whitespace char
+// re = /\S/; // Match non-whitespace char
+// re = /Hell\b/i; // Word boundary
+
+// // Assertions
+// re = /x(?=y)/; // Match x only if followed by y
+// re = /x(?!y)/; // Match x only if not followed by y
+
+// // String to match
+// const str = 'Hello';
+
+// // Log Results
+// const result = re.exec(str);
+// console.log(result);
+
+// function reTest(re, str){
+//     if(re.test(str)){
+//         console.log(`${str} matches ${re.source}`);
+//     } else {
+//         console.log(`${str} does NOT match ${re.source}`);
+//     }
+// }
+
+// reTest(re, str);
